@@ -4,19 +4,19 @@ public class Ejercicio1 {
 
     public static void main(String[] args){
         String[] listaNombres = {"Juan", "Raul", "Dora"};
-        ImprimirElementos(listaNombres);
+        imprimirElementos(listaNombres);
 
         String clave = "Raul";
-        if (HitElemento(listaNombres, clave)){
+        if (hitElemento(listaNombres, clave)){
             System.out.println("Encontrado " + clave);
         } else {
             System.out.println("No está " + clave);
         }
 
         String sub = "u";
-        ImprimirElementos(HitSubstring(listaNombres,sub));
+        imprimirElementos(hitSubstring(listaNombres,sub));
     }
-    private static void ImprimirElementos(String[] lista) {
+    private static void imprimirElementos(String[] lista) {
        // Sintaxis: (inicio; condición; incremento)
         for (int i = 0; i < lista.length; i++) {
             int j = i + 1;
@@ -25,14 +25,14 @@ public class Ejercicio1 {
             }
         }
     }
-    private static boolean HitElemento(String[] lista, String elemento) {
+    private static boolean hitElemento(String[] lista, String elemento) {
         Boolean salida = false;
         for (int i = 0; i < lista.length; i++) {
             if (lista[i].equals(elemento)) salida = true;
         }
         return (salida);
     }
-    private static String[] HitSubstring(String[] lista, String substring){
+    private static String[] hitSubstring(String[] lista, String substring){
         int k = 0;
         String salida[]= new String[lista.length];
         for (int i = 0; i < lista.length; i++) {
