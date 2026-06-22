@@ -17,8 +17,7 @@ public class Ejercicio1 {
         imprimirElementos(hitSubstring(listaNombres,sub));
     }
     private static void imprimirElementos(String[] lista) {
-       // Sintaxis: (inicio; condición; incremento)
-        for (int i = 0; i < lista.length; i++) {
+       for (int i = 0; i < lista.length; i++) {
             int j = i + 1;
             if (lista[i] != null) {
                 System.out.println("Nombre " + j + ": " + lista[i]);
@@ -26,17 +25,23 @@ public class Ejercicio1 {
         }
     }
     private static boolean hitElemento(String[] lista, String elemento) {
-        Boolean salida = false;
-        for (int i = 0; i < lista.length; i++) {
-            if (lista[i].equals(elemento)) salida = true;
+        boolean salida = false;
+        for (String s : lista) {
+            if (s.equals(elemento)) {
+                salida = true;
+                break;
+            }
         }
         return (salida);
     }
     private static String[] hitSubstring(String[] lista, String substring){
         int k = 0;
-        String salida[]= new String[lista.length];
-        for (int i = 0; i < lista.length; i++) {
-             if (lista[i].contains(substring)) {salida[k] = lista[i]; k++;}
+        String[] salida = new String[lista.length];
+        for (String s : lista) {
+            if (s.contains(substring)) {
+                salida[k] = s;
+                k++;
+            }
         }
         return (salida);
     }
