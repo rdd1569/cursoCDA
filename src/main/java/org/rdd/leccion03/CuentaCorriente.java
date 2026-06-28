@@ -2,6 +2,13 @@ package org.rdd.leccion03;
 
 public class CuentaCorriente extends CuentaBancaria{
     private double limiteSobregiro;
+
+    public void setLimiteSobregiro(double acuerdo) {
+        if (acuerdo > 0) {
+            limiteSobregiro = acuerdo;
+        }
+    }
+    @Override
     public void retirar(double monto) {
         double saldoFinal = saldo - monto + limiteSobregiro;
         if (monto > 0 &&  saldoFinal >= 0 ) {
