@@ -1,6 +1,4 @@
-package org.rdd;
-
-import org.rdd.leccion03.CajaAhorro;
+package org.rdd.leccion03;
 
 public class Paso1 {
     public static void main(String[] args) {
