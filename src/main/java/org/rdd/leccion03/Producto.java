@@ -26,4 +26,8 @@ public class Producto {
     public double getSaldo() {
         return saldo;
     }
+    public void consultaEstado() {
+        System.out.println("Cliente: " + clienteId + " Cuenta: " + numeroProducto);
+        System.out.println("Saldo: " + saldo);
+    }
 }

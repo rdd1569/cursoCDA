@@ -7,7 +7,7 @@ public class Paso2 {
         // Crear una CuentaCorriente con saldo de $1,000 y un límite de sobregiro de $2,000.
         CuentaCorriente cuentaCC = new CuentaCorriente();
         cuentaCC.setNumeroProducto("000002/4");
-        cuentaCC.setClienteId("00000002");
+        cuentaCC.setClienteId("00000001");
         cuentaCC.setSaldo(1000);
         cuentaCC.setLimiteSobregiro(2000);
         //  Realizar un retiro de 2500

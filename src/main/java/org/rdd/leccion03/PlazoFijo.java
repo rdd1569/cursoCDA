@@ -20,6 +20,6 @@ public class PlazoFijo extends Producto {
 
     public void simularVencimiento() {
         double Ganancia = saldo * (tasaInteres / 100) * (plazoDias / 365.0);
-        System.out.println("Intereses al vto." + Ganancia);
+        System.out.printf("Intereses al vto. %.2f\n", Ganancia);
     }
 }
